@@ -5,8 +5,8 @@ void printBoard(int n, char board[n][n]);
 int getMove(int n, char board[n][n], int *r, int *c, char sym);
 
 int main(){
-    int n;
-    int size = n;
+    int size;
+    char players[3] = {'X', 'O', 'Z'};
 
     printf("Enter the board size n (3 <= size <= 10) : ");
     scanf("%d", &size);
@@ -15,9 +15,12 @@ int main(){
         printf("Invalid board size. Please enter a value between 3 and 10.\n");
         return 1;
     }
-    char board[size][size];
-    initializeBoard(size, board);   
-    printBoard(size, board);
+
+    char players[3] = {'X', 'O', 'Z'};
+    
+    int current_player = 0; // 0 for X, 1 for O, 2 for Z
+
+
 
     int Game_Mode;
 
@@ -29,6 +32,8 @@ int main(){
 
     if(Game_Mode == 1){
         printf("Starting Two Player mode...\n");
+
+        int getMove(int n, char board[n][n], int *r, int *c, char sym);
     
     } /* else if(Game_Mode == 2){
         printf("Starting Player vs Computer mode...\n");
@@ -85,7 +90,7 @@ void printBoard(int n, char board[n][n]){
     printf("\n");
 }
 
-int  getMove(int n, char board[n][n], int *r, int *c, char sym){
+int getMove(int n, char board[n][n], int *r, int *c, char sym){
         int raw , coloum;
         printf("Enter your move (row and column) for %c:", sym);
         scanf("%d %d", &raw, &coloum);
@@ -94,3 +99,5 @@ int  getMove(int n, char board[n][n], int *r, int *c, char sym){
             return 1;
         }
 }
+
+int rowCrossed(char **board, int size, char player){
