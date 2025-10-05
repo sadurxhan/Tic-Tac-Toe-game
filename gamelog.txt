@@ -1,0 +1,11 @@
+--- Tic Tac Toe Game ---
+Player 1 (X) => Row 4, Column 4
+Player 2 (O) => Row 1, Column 2
+Player 3 (Z) => Row 4, Column 2
+Player 1 (X) => Row 1, Column 1
+Player 2 (O) => Row 2, Column 3
+Player 3 (Z) => Row 3, Column 4
+Player 1 (X) => Row 3, Column 3
+Player 2 (O) => Row 3, Column 1
+Player 3 (Z) => Row 2, Column 4
+Player 1 (X) => Row 2, Column 2
